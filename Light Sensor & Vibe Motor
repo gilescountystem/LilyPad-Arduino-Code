@@ -1,0 +1,59 @@
+/*This sketch uses the light sensor attached to the A6 pin on
+the LilyPad Protosnap Development Board to turn on/off the LEDs
+and the vibe motor 
+Created by: Christina Martin
+*/
+
+int ledPin1 = 5;
+int ledPin2 = 6;
+int ledPin3 = A2;
+int ledPin4 = A4;
+int ledPin5 = A3;
+int lightSensorPin = A6;
+
+int light = 100;
+
+int vibePin = 3;
+int buttonPin = A5;
+
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (ledPin1, OUTPUT);
+pinMode (ledPin2, OUTPUT);
+pinMode (ledPin3, OUTPUT);
+pinMode (ledPin4, OUTPUT);
+pinMode (ledPin5, OUTPUT);
+pinMode (lightSensorPin, INPUT);
+pinMode (vibePin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+if(analogRead (lightSensorPin) <20){
+digitalWrite (vibePin, HIGH);
+digitalWrite (ledPin1, HIGH);
+delay (100);
+digitalWrite (ledPin1, LOW);
+digitalWrite (ledPin2, HIGH);
+delay (100);
+digitalWrite (ledPin2, LOW);
+digitalWrite (ledPin3, HIGH);
+delay (100);
+digitalWrite (ledPin3, LOW);
+digitalWrite (ledPin4, HIGH);
+delay (100);
+digitalWrite (ledPin4, LOW);
+digitalWrite (ledPin5, HIGH);
+delay (100);
+digitalWrite (ledPin1, LOW);}
+
+else {
+digitalWrite (vibePin, LOW);  
+digitalWrite (ledPin1, LOW);
+digitalWrite (ledPin2, LOW);
+digitalWrite (ledPin3, LOW);
+digitalWrite (ledPin4, LOW);
+digitalWrite (ledPin5, LOW);}
+}
