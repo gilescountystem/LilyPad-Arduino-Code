@@ -1,0 +1,46 @@
+/*This sketch allows the button pin attached to A5 on the 
+LilyPad Protosnap Development Board to trigger both the LED lights
+and the Vibe motor */
+
+int ledPin1 = 5;
+int ledPin2 = 6;
+int ledPin3 = A2;
+int ledPin4 = A4;
+int ledPin5 = A3;
+int vibePin = 3;
+int buttonPin = A5;
+int buttonState;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (ledPin1, OUTPUT);
+pinMode (ledPin2, OUTPUT);
+pinMode (ledPin3, OUTPUT);
+pinMode (ledPin4, OUTPUT);
+pinMode (ledPin5, OUTPUT);
+pinMode (buttonPin, INPUT_PULLUP);
+pinMode (vibePin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+buttonState = digitalRead(buttonPin);
+
+if (buttonState ==LOW) {
+digitalWrite(vibePin, HIGH);
+digitalWrite (ledPin1, HIGH);
+digitalWrite (ledPin2, HIGH);
+digitalWrite (ledPin3, HIGH);
+digitalWrite (ledPin4, HIGH);
+digitalWrite (ledPin5, HIGH);
+ }
+
+else {
+  digitalWrite (vibePin, LOW);
+   digitalWrite (ledPin1, LOW);
+digitalWrite (ledPin2, LOW);
+digitalWrite (ledPin3, LOW);
+digitalWrite (ledPin4, LOW);
+digitalWrite (ledPin5, LOW);
+}
+}
