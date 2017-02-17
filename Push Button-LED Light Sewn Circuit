@@ -1,4 +1,4 @@
-/*This code uses the push button on a Lilypad Protosnap Development board
+/*This sketch uses the push button on a Lilypad Protosnap Development board
   connected to pin 5 to control an LED connected to Pin 11*/
 
 int buttonPin = 5;
