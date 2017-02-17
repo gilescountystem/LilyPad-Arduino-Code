@@ -1,4 +1,4 @@
-/*This code will use the light sensor on a LilyPad Protosnap Development
+/*This sketch uses the light sensor on a LilyPad Protosnap Development
  Board connected to Pin A6 to turn on/off the LEDs based on the reading
  from the light sensor */
 
