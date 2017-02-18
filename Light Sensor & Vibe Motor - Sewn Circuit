@@ -1,0 +1,19 @@
+/*This sketch uses a light sensor attached to the A5 pin on a LilyPad Arduino
+ to control the vibe motor attached to pin 6*/
+
+int lightsensorPin = A5;
+int vibePin = 6;
+int light = 100;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (lightsensorPin, INPUT);
+pinMode (vibePin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+if (analogRead (lightsensorPin) <20){
+  digitalWrite (vibePin, HIGH);}
+  else {digitalWrite (vibePin, LOW);}
+  }
