@@ -1,9 +1,9 @@
 /*This sketch uses the push button on a Lilypad Protosnap Development board
-  connected to pin 5 to control an LED connected to Pin 11*/
+  connected to pin 6 to control an LED connected to Pin 10*/
 
-int buttonPin = 5;
+int buttonPin = 6;
 int buttonValue = 0;
-int LEDpin = 11;
+int LEDpin = 10;
 
  
 void setup() {
