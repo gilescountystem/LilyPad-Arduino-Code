@@ -1,0 +1,43 @@
+/* This sketch will turn on/off the 5 LED lights located on ports 5,6,A2, A4, & A3 on a LilyPad Protonsap Development Board.
+ The purpose of this sketch is to introduce students to the basic programming language of Arduino
+ Written by: Christina Martin*/
+
+//define the LED lights that the program will be using
+
+ int LED1 = 5;
+ int LED2 = 6;
+ int LED3 = A2;
+ int LED4 = A4;
+ int LED5 = A3;
+
+void setup() {
+  // put your setup code here, to run once:
+//In this section you will define whether each integer defined in your setup is an output or an input.  
+
+pinMode (LED1, OUTPUT); 
+pinMode (LED2, OUTPUT);
+pinMode (LED3, OUTPUT);
+pinMode (LED4, OUTPUT);
+pinMode (LED5, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+//In this section will write the code that will tell the computer how to turn on/off your LED lights.
+//the use of the code "digitalWrite" will turn an OUTPUT on or off (HIGH = On, LOW = OFF), repeat the code for each LED light defined
+digitalWrite (LED1, HIGH); 
+delay (500); // how long the light will stay on in milliseconds
+digitalWrite (LED1, LOW); 
+digitalWrite (LED2, HIGH); 
+delay (500); // how long the light will stay on in milliseconds
+digitalWrite (LED2, LOW); 
+digitalWrite (LED3, HIGH); 
+delay (500); // how long the light will stay on in milliseconds
+digitalWrite (LED3, LOW); 
+digitalWrite (LED4, HIGH); 
+delay (500); // how long the light will stay on in milliseconds
+digitalWrite (LED4, LOW); 
+digitalWrite (LED5, HIGH); 
+delay (500); // how long the light will stay on in milliseconds
+digitalWrite (LED5, LOW); 
+}
