@@ -1,0 +1,31 @@
+/*This sketch uses the light senesor to change the color of the RGB LED light*/
+
+int redPin = 9; // define red pin
+int greenPin = 11; //define green pin
+int bluePin = 10; //define blue pin
+int lightsensorPin = A6; //define the light sensor
+int light = 100; //set the value of light
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (redPin, OUTPUT); //set red led as output
+pinMode (greenPin, OUTPUT);//set green led as output
+pinMode (bluePin, OUTPUT); //set blue led as output
+pinMode (lightsensorPin, INPUT); //set light sensor as input
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ //when the light sensor pin reads above 20 the RGB led will be blue and when it reads below 20 the RGB led will turn red - a value of 0 turns the light on - a value of 255 turns the light off
+if (analogRead (lightsensorPin)<20){ //analog read the light sensor
+analogWrite (redPin, 0); //turn red light on
+analogWrite (greenPin, 255);//turn green light off
+analogWrite (bluePin, 255);}//turn blue light off
+
+else {
+analogWrite (greenPin, 255);//turn green light off
+analogWrite (bluePin, 0);//turn blue light on
+analogWrite (redPin, 255);}//turn red light off
+
+}
