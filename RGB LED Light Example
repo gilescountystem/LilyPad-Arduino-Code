@@ -1,0 +1,50 @@
+/*This sketch demonstrates how to use the RGB led.  This sketch turns on the 3 colors(Red, Green Blue) individually 
+and then uses variations of red, green, and blue to make different colors.*/
+
+int redPin = 9; // define red pin
+int greenPin = 11; //define green pin
+int bluePin = 10; //define blue pin
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode (redPin, OUTPUT); //set red led as output
+pinMode (greenPin, OUTPUT);//set green led as output
+pinMode (bluePin, OUTPUT); //set blue led as output
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+ //a value of 255 turns the light off
+ //a value of 0 turns the light on
+ //for mixing colors - use values between 0 and 255
+
+ analogWrite (redPin, 0);
+ analogWrite (greenPin, 255);
+ analogWrite (bluePin, 255);
+ delay (500);
+ analogWrite (greenPin, 0);
+ analogWrite (redPin, 255);
+ analogWrite (bluePin, 255);
+ delay (500);
+ analogWrite (bluePin, 0);
+ analogWrite (greenPin, 255);
+ analogWrite (redPin, 255);
+ delay (500);
+  analogWrite (redPin, 100);
+  analogWrite (greenPin, 255);
+ analogWrite (bluePin, 100);
+ delay (500);
+ analogWrite (bluePin, 180);
+ analogWrite (greenPin, 100);
+ analogWrite (redPin, 255);
+ delay (500);
+ analogWrite (greenPin, 150);
+ analogWrite (redPin, 150);
+ analogWrite (bluePin, 150);
+ delay (500);
+ analogWrite (redPin, 255);
+ analogWrite (greenPin, 255);
+ analogWrite (bluePin, 255);
+ delay (1000);
+}
