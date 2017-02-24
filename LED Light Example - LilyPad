@@ -23,8 +23,9 @@ pinMode (LED5, OUTPUT);
 
 void loop() {
   // put your main code here, to run repeatedly:
-//In this section will write the code that will tell the computer how to turn on/off your LED lights.
+//In this section write the code that will tell the computer how to turn on/off your LED lights.
 //the use of the code "digitalWrite" will turn an OUTPUT on or off (HIGH = On, LOW = OFF), repeat the code for each LED light defined
+
 digitalWrite (LED1, HIGH); 
 delay (500); // how long the light will stay on in milliseconds
 digitalWrite (LED1, LOW); 
