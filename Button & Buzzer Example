@@ -1,0 +1,53 @@
+/*This sketch shows how to use the button pin attached to A5 to trigger the buzzer attached to pin 7 on the ProtoSnap LilyPad Development Board
+ to make sounds */
+
+//Define the buzzer pin and the values of each sound
+
+int buzzerPin = 7;
+int buttonPin = A5;
+int buttonState = 0;
+
+const int C = 1046;
+const int D = 1175;
+const int E = 1319;
+const int F = 1397;
+const int G = 1568;
+const int A = 1760;
+const int B = 1976;
+const int C1 = 2093;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  
+pinMode (buzzerPin, OUTPUT);//define the buzzer pin as an OUTPUT
+pinMode (buttonPin, INPUT_PULLUP); //input_pullup is used so that the value on the button will not be floating
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+buttonState = digitalRead (buttonPin);
+if (buttonState ==LOW) { 
+//choose what notes to play and how long to delay each note
+tone (buzzerPin, C);
+delay (500);
+tone (buzzerPin, D);
+delay (500);
+tone (buzzerPin, E);
+delay (500);
+tone (buzzerPin, F);
+delay (500);
+tone (buzzerPin, G);
+delay (500);
+tone (buzzerPin, A);
+delay (500);
+tone (buzzerPin, B);
+delay (500);
+tone (buzzerPin, C1);
+delay (1000);}
+
+else {noTone (buzzerPin);}
+
+
+}
