@@ -5,7 +5,7 @@
 
 int buzzerPin = 7;
 int buttonPin = A5;
-int buttonState;
+int buttonState = 0;
 
 const int C = 1046;
 const int D = 1175;
