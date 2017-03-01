@@ -1,6 +1,5 @@
 /* This sketch will turn on/off the 5 LED lights located on ports 5,6,A2, A4, & A3 on a LilyPad Protonsap Development Board.
- The purpose of this sketch is to introduce students to the basic programming language of Arduino
- Written by: Christina Martin*/
+ The purpose of this sketch is to introduce students to the basic programming language of Arduino*/
 
 //define the LED lights that the program will be using
 
