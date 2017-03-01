@@ -20,7 +20,7 @@ pinMode (LED2, OUTPUT);
 pinMode (LED3, OUTPUT);
 pinMode (LED4, OUTPUT);
 pinMode (LED5, OUTPUT);
-pinMode (lightSensorPin, OUTPUT);
+pinMode (lightSensorPin, INPUT);
 }
 
 void loop() {
