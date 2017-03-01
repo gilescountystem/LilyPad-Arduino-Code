@@ -43,7 +43,7 @@ digitalWrite (LED3, LOW);
 digitalWrite (LED4, HIGH);
 delay (100);
 digitalWrite (LED4, LOW);
-digitalWrite (lLED5, HIGH);
+digitalWrite (LED5, HIGH);
 delay (100);
 digitalWrite (LED5, LOW);}
 
