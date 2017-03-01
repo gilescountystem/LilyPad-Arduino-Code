@@ -1,8 +1,6 @@
 /*This sketch uses the light sensor attached to the A6 pin on
 the LilyPad Protosnap Development Board to turn on/off the LEDs
-and the vibe motor 
-Created by: Christina Martin
-*/
+and the vibe motor */
 
 int ledPin1 = 5;
 int ledPin2 = 6;
