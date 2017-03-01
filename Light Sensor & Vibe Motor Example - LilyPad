@@ -12,7 +12,7 @@ int lightSensorPin = A6;
 int light = 100;
 
 int vibePin = 3;
-int buttonPin = A5;
+
 
 
 void setup() {
